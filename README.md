@@ -77,24 +77,37 @@ this.geoService.getAll().then(value => {
 });
 ```
 # Parameter
-accuracy : <number>
-altitude : <it work if your browser support>
-altitudeAccuracy : <it work if your browser support>
-heading : <it work if your browser support>
-latitude : <double/float>
-longitude : <double/float>
-speed : <it work if your browser support>
-timestamp : <number (TimeStamp) when you get the information>
+``` javascript
+{
+  accuracy : <number>,
+  altitude : <it work if your browser support>,
+  altitudeAccuracy : <it work if your browser support>,
+  heading : <it work if your browser support>,
+  latitude : <double/float>,
+  longitude : <double/float>,
+  speed : <it work if your browser support>,
+  timestamp : <number (TimeStamp) when you get the information>,
+}
+```
+
 
 # Error Response
-status : error
-code: if you get error
-message: Error Message
-name: Error Name
+``` javascript
+{
+  status : error,
+  code: if you get error,
+  message: Error Message,
+  name: Error Name,
+}
+``` 
 
 # Success Response
-status: success
-geoData: number if you call get function else return all coordination object
+```javascript
+{
+  status: success,
+  geoData: number if you call get function else return all coordination object
+}
+```
 
 # Author
 
