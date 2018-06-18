@@ -1,0 +1,96 @@
+{
+  "author": {
+    "name": "Tejas Rana",
+    "email": "me@tejasrana.com"
+  },
+  "bugs": {
+    "url": "https://github.com/tejasrana95/ngx-geo-info-angular/issues",
+    "email": "me@tejasrana.com"
+  },
+  "contributors": [
+    {
+      "name": "Tejas Rana",
+      "email": "me@tejasrana.com"
+    }
+  ],
+  "description": "A module which gives you GEO info of user 'latitude', 'longitude', 'accuracy', 'altitude', 'altitudeAccuracy', 'heading', 'speed', 'timestamp' and best of all it is AOT ready",
+  "devDependencies": {
+    "@angular/cli": "1.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/platform-server": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "~6.0.60",
+    "async": "^2.3.0",
+    "codelyzer": "~2.0.0",
+    "core-js": "^2.4.1",
+    "jasmine-core": "~2.5.2",
+    "jasmine-spec-reporter": "~3.2.0",
+    "karma": "~1.4.1",
+    "karma-chrome-launcher": "~2.0.0",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.1.0",
+    "rimraf": "^2.6.1",
+    "rxjs": "^5.1.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.2.0",
+    "zone.js": "^0.8.4"
+  },
+  "homepage": "https://github.com/7leads/ngx-cookie-service#readme",
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular4",
+    "angular5",
+    "angular-2",
+    "angular-4",
+    "angular-5",
+    "angular-6",
+    "angular6",
+    "aot",
+    "aot-compatible",
+    "aot-compilation",
+    "ngx",
+    "ng2",
+    "ng",
+    "service",
+    "angular-service",
+    "geo-service",
+    "Geo info", "Tejas Rana", "my geo info", "lat long info"
+  ],
+  "license": "MIT",
+  "main": "lib/index.ts",
+  "name": "ngx-geo-info-angular",
+  "peerDependencies": {
+    "@angular/core": ">=4.0.0",
+    "@angular/platform-browser": ">=4.0.0",
+    "@angular/platform-browser-dynamic": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tejasrana95/ngx-geo-info-angular.git"
+  },
+  "scripts": {
+    "build": "npm run compile && ng build",
+    "compile": "node scripts/compile.js",
+    "e2e": "npm run compile && ng e2e",
+    "lint": "npm run compile && ng lint",
+    "ng": "ng",
+    "publish:dist": "npm run compile && cd dist-lib && npm publish",
+    "start": "npm run compile && ng serve",
+    "test": "npm run compile && ng test"
+  },
+  "typings": "lib/index.ts",
+  "version": "1.0.10"
+}
