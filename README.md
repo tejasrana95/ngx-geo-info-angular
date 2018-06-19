@@ -46,12 +46,18 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.geoService.getAll().then(value => {
       console.log(value);
+    }, (err) => {
+        console.log(value);
     });
     this.geoService.get('latitude').then(value => {
       console.log(value);
+    }, (err) => {
+        console.log(value);
     });
     this.geoService.get('longitude').then(value => {
       console.log(value);
+    , (err) => {
+        console.log(value);
     });
   }
 }
@@ -66,13 +72,18 @@ That's it!
 ```typescript
 this.geoService.get('latitude').then(value => {
       console.log(value);
+}, (err) => {
+      console.log(value);
 });
+
 ```
 
 ## getAll(): {};
 
 ```typescript
 this.geoService.getAll().then(value => {
+      console.log(value);
+}, (err) => {
       console.log(value);
 });
 ```
@@ -95,7 +106,6 @@ this.geoService.getAll().then(value => {
 ``` javascript
 {
   status : error,
-  code: if you get error,
   message: Error Message,
   name: Error Name,
 }
