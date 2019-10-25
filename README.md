@@ -47,17 +47,17 @@ export class AppComponent implements OnInit {
     this.geoService.getAll().then(value => {
       console.log(value);
     }, (err) => {
-        console.log(value);
+        console.log(err);
     });
     this.geoService.get('latitude').then(value => {
       console.log(value);
     }, (err) => {
-        console.log(value);
+        console.log(err);
     });
     this.geoService.get('longitude').then(value => {
       console.log(value);
     , (err) => {
-        console.log(value);
+        console.log(err);
     });
   }
 }
@@ -73,7 +73,7 @@ That's it!
 this.geoService.get('latitude').then(value => {
       console.log(value);
 }, (err) => {
-      console.log(value);
+      console.log(err);
 });
 
 ```
@@ -84,7 +84,7 @@ this.geoService.get('latitude').then(value => {
 this.geoService.getAll().then(value => {
       console.log(value);
 }, (err) => {
-      console.log(value);
+      console.log(err);
 });
 ```
 # Parameter
