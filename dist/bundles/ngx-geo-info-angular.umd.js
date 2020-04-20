@@ -2,9 +2,9 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core')) :
     typeof define === 'function' && define.amd ? define(['exports', '@angular/core'], factory) :
     (factory((global['ngx-geo-info-angular'] = global['ngx-geo-info-angular'] || {}),global.ng.core));
-}(this, (function (exports,_angular_core) { 'use strict';
+}(this, (function (exports,i0) { 'use strict';
 
-var NgxGeoCoordinatesInfo = (function () {
+var NgxGeoCoordinatesInfo = /** @class */ (function () {
     function NgxGeoCoordinatesInfo() {
         this.gotdevice = {};
     }
@@ -65,14 +65,14 @@ var NgxGeoCoordinatesInfo = (function () {
             });
         });
     };
-    NgxGeoCoordinatesInfo.decorators = [
-        { type: _angular_core.Injectable },
-    ];
-    /** @nocollapse */
-    NgxGeoCoordinatesInfo.ctorParameters = function () { return []; };
+    NgxGeoCoordinatesInfo.ɵfac = function NgxGeoCoordinatesInfo_Factory(t) { return new (t || NgxGeoCoordinatesInfo)(); };
+    NgxGeoCoordinatesInfo.ɵprov = i0.ɵɵdefineInjectable({ token: NgxGeoCoordinatesInfo, factory: NgxGeoCoordinatesInfo.ɵfac });
     return NgxGeoCoordinatesInfo;
 }());
-var CoodinatesResponse = (function () {
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NgxGeoCoordinatesInfo, [{
+        type: i0.Injectable
+    }], function () { return []; }, null); })();
+var CoodinatesResponse = /** @class */ (function () {
     function CoodinatesResponse(data) {
         this.status = data.status || '';
         this.message = data.message || '';
@@ -80,7 +80,7 @@ var CoodinatesResponse = (function () {
     }
     return CoodinatesResponse;
 }());
-var AllCoodinatesResponse = (function () {
+var AllCoodinatesResponse = /** @class */ (function () {
     function AllCoodinatesResponse(data) {
         this.status = data.status || '';
         this.message = data.message || '';
@@ -88,7 +88,7 @@ var AllCoodinatesResponse = (function () {
     }
     return AllCoodinatesResponse;
 }());
-var GeoCoodination = (function () {
+var GeoCoodination = /** @class */ (function () {
     function GeoCoodination(data) {
         this.accuracy = data.accuracy || '';
         this.altitude = data.altitude || '';
@@ -106,23 +106,29 @@ function NgxGeoCoordinatesInfoFactory() {
     return new NgxGeoCoordinatesInfo();
 }
 
-var NgxGeoCoordinatesInfoModule = (function () {
+var NgxGeoCoordinatesInfoModule = /** @class */ (function () {
     function NgxGeoCoordinatesInfoModule() {
     }
-    NgxGeoCoordinatesInfoModule.decorators = [
-        { type: _angular_core.NgModule, args: [{
-                    providers: [
-                        {
-                            provide: NgxGeoCoordinatesInfo,
-                            useFactory: NgxGeoCoordinatesInfoFactory
-                        }
-                    ]
-                },] },
-    ];
-    /** @nocollapse */
-    NgxGeoCoordinatesInfoModule.ctorParameters = function () { return []; };
+    NgxGeoCoordinatesInfoModule.ɵmod = i0.ɵɵdefineNgModule({ type: NgxGeoCoordinatesInfoModule });
+    NgxGeoCoordinatesInfoModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NgxGeoCoordinatesInfoModule_Factory(t) { return new (t || NgxGeoCoordinatesInfoModule)(); }, providers: [
+            {
+                provide: NgxGeoCoordinatesInfo,
+                useFactory: NgxGeoCoordinatesInfoFactory
+            }
+        ] });
     return NgxGeoCoordinatesInfoModule;
 }());
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NgxGeoCoordinatesInfoModule, [{
+        type: i0.NgModule,
+        args: [{
+                providers: [
+                    {
+                        provide: NgxGeoCoordinatesInfo,
+                        useFactory: NgxGeoCoordinatesInfoFactory
+                    }
+                ]
+            }]
+    }], null, null); })();
 
 exports.NgxGeoCoordinatesInfoModule = NgxGeoCoordinatesInfoModule;
 exports.NgxGeoCoordinatesInfo = NgxGeoCoordinatesInfo;

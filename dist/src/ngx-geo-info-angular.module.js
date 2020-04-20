@@ -1,24 +1,32 @@
 import { NgModule } from '@angular/core';
 import { NgxGeoCoordinatesInfo } from './ngx-geo-info-angular';
+import * as i0 from "@angular/core";
 export function NgxGeoCoordinatesInfoFactory() {
     return new NgxGeoCoordinatesInfo();
 }
 ;
-export var NgxGeoCoordinatesInfoModule = (function () {
+var NgxGeoCoordinatesInfoModule = /** @class */ (function () {
     function NgxGeoCoordinatesInfoModule() {
     }
-    NgxGeoCoordinatesInfoModule.decorators = [
-        { type: NgModule, args: [{
-                    providers: [
-                        {
-                            provide: NgxGeoCoordinatesInfo,
-                            useFactory: NgxGeoCoordinatesInfoFactory
-                        }
-                    ]
-                },] },
-    ];
-    /** @nocollapse */
-    NgxGeoCoordinatesInfoModule.ctorParameters = function () { return []; };
+    NgxGeoCoordinatesInfoModule.ɵmod = i0.ɵɵdefineNgModule({ type: NgxGeoCoordinatesInfoModule });
+    NgxGeoCoordinatesInfoModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NgxGeoCoordinatesInfoModule_Factory(t) { return new (t || NgxGeoCoordinatesInfoModule)(); }, providers: [
+            {
+                provide: NgxGeoCoordinatesInfo,
+                useFactory: NgxGeoCoordinatesInfoFactory
+            }
+        ] });
     return NgxGeoCoordinatesInfoModule;
 }());
+export { NgxGeoCoordinatesInfoModule };
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NgxGeoCoordinatesInfoModule, [{
+        type: NgModule,
+        args: [{
+                providers: [
+                    {
+                        provide: NgxGeoCoordinatesInfo,
+                        useFactory: NgxGeoCoordinatesInfoFactory
+                    }
+                ]
+            }]
+    }], null, null); })();
 //# sourceMappingURL=ngx-geo-info-angular.module.js.map

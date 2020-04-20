@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-export var NgxGeoCoordinatesInfo = (function () {
+import * as i0 from "@angular/core";
+var NgxGeoCoordinatesInfo = /** @class */ (function () {
     function NgxGeoCoordinatesInfo() {
         this.gotdevice = {};
     }
@@ -60,14 +61,15 @@ export var NgxGeoCoordinatesInfo = (function () {
             });
         });
     };
-    NgxGeoCoordinatesInfo.decorators = [
-        { type: Injectable },
-    ];
-    /** @nocollapse */
-    NgxGeoCoordinatesInfo.ctorParameters = function () { return []; };
+    NgxGeoCoordinatesInfo.ɵfac = function NgxGeoCoordinatesInfo_Factory(t) { return new (t || NgxGeoCoordinatesInfo)(); };
+    NgxGeoCoordinatesInfo.ɵprov = i0.ɵɵdefineInjectable({ token: NgxGeoCoordinatesInfo, factory: NgxGeoCoordinatesInfo.ɵfac });
     return NgxGeoCoordinatesInfo;
 }());
-export var CoodinatesResponse = (function () {
+export { NgxGeoCoordinatesInfo };
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NgxGeoCoordinatesInfo, [{
+        type: Injectable
+    }], function () { return []; }, null); })();
+var CoodinatesResponse = /** @class */ (function () {
     function CoodinatesResponse(data) {
         this.status = data.status || '';
         this.message = data.message || '';
@@ -75,7 +77,8 @@ export var CoodinatesResponse = (function () {
     }
     return CoodinatesResponse;
 }());
-export var AllCoodinatesResponse = (function () {
+export { CoodinatesResponse };
+var AllCoodinatesResponse = /** @class */ (function () {
     function AllCoodinatesResponse(data) {
         this.status = data.status || '';
         this.message = data.message || '';
@@ -83,7 +86,8 @@ export var AllCoodinatesResponse = (function () {
     }
     return AllCoodinatesResponse;
 }());
-export var GeoCoodination = (function () {
+export { AllCoodinatesResponse };
+var GeoCoodination = /** @class */ (function () {
     function GeoCoodination(data) {
         this.accuracy = data.accuracy || '';
         this.altitude = data.altitude || '';
@@ -96,4 +100,5 @@ export var GeoCoodination = (function () {
     }
     return GeoCoodination;
 }());
+export { GeoCoodination };
 //# sourceMappingURL=ngx-geo-info-angular.js.map
