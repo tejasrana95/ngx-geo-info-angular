@@ -1,4 +1,7 @@
-An (AOT ready) Angular (4+) service for Geo coordination.
+
+An (AOT ready) Angular (9+) service for Geo coordination.
+
+For older version please visit: [https://www.npmjs.com/package/ngx-geo-info-angular/v/1.0.5](https://www.npmjs.com/package/ngx-geo-info-angular/v/1.0.5)
 
 # Installation
 

@@ -1,6 +1,6 @@
 {
   "name": "ngx-geo-info-angular",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A module which gives you GEO info of user 'latitude', 'longitude', 'accuracy', 'altitude', 'altitudeAccuracy', 'heading', 'speed', 'timestamp' and best of all it is AOT ready",
   "main": "dist/bundles/ngx-geo-info-angular.umd.js",
   "scripts": {
