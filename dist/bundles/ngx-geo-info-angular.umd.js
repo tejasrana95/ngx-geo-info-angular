@@ -2,8 +2,17 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core')) :
     typeof define === 'function' && define.amd ? define(['exports', '@angular/core'], factory) :
     (factory((global['ngx-geo-info-angular'] = global['ngx-geo-info-angular'] || {}),global.ng.core));
-}(this, (function (exports,i0) { 'use strict';
+}(this, (function (exports,_angular_core) { 'use strict';
 
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var NgxGeoCoordinatesInfo = /** @class */ (function () {
     function NgxGeoCoordinatesInfo() {
         this.gotdevice = {};
@@ -65,13 +74,12 @@ var NgxGeoCoordinatesInfo = /** @class */ (function () {
             });
         });
     };
-    NgxGeoCoordinatesInfo.ɵfac = function NgxGeoCoordinatesInfo_Factory(t) { return new (t || NgxGeoCoordinatesInfo)(); };
-    NgxGeoCoordinatesInfo.ɵprov = i0.ɵɵdefineInjectable({ token: NgxGeoCoordinatesInfo, factory: NgxGeoCoordinatesInfo.ɵfac });
+    NgxGeoCoordinatesInfo = __decorate$1([
+        _angular_core.Injectable(),
+        __metadata("design:paramtypes", [])
+    ], NgxGeoCoordinatesInfo);
     return NgxGeoCoordinatesInfo;
 }());
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NgxGeoCoordinatesInfo, [{
-        type: i0.Injectable
-    }], function () { return []; }, null); })();
 var CoodinatesResponse = /** @class */ (function () {
     function CoodinatesResponse(data) {
         this.status = data.status || '';
@@ -102,6 +110,12 @@ var GeoCoodination = /** @class */ (function () {
     return GeoCoodination;
 }());
 
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 function NgxGeoCoordinatesInfoFactory() {
     return new NgxGeoCoordinatesInfo();
 }
@@ -109,26 +123,18 @@ function NgxGeoCoordinatesInfoFactory() {
 var NgxGeoCoordinatesInfoModule = /** @class */ (function () {
     function NgxGeoCoordinatesInfoModule() {
     }
-    NgxGeoCoordinatesInfoModule.ɵmod = i0.ɵɵdefineNgModule({ type: NgxGeoCoordinatesInfoModule });
-    NgxGeoCoordinatesInfoModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NgxGeoCoordinatesInfoModule_Factory(t) { return new (t || NgxGeoCoordinatesInfoModule)(); }, providers: [
-            {
-                provide: NgxGeoCoordinatesInfo,
-                useFactory: NgxGeoCoordinatesInfoFactory
-            }
-        ] });
+    NgxGeoCoordinatesInfoModule = __decorate([
+        _angular_core.NgModule({
+            providers: [
+                {
+                    provide: NgxGeoCoordinatesInfo,
+                    useFactory: NgxGeoCoordinatesInfoFactory
+                }
+            ]
+        })
+    ], NgxGeoCoordinatesInfoModule);
     return NgxGeoCoordinatesInfoModule;
 }());
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NgxGeoCoordinatesInfoModule, [{
-        type: i0.NgModule,
-        args: [{
-                providers: [
-                    {
-                        provide: NgxGeoCoordinatesInfo,
-                        useFactory: NgxGeoCoordinatesInfoFactory
-                    }
-                ]
-            }]
-    }], null, null); })();
 
 exports.NgxGeoCoordinatesInfoModule = NgxGeoCoordinatesInfoModule;
 exports.NgxGeoCoordinatesInfo = NgxGeoCoordinatesInfo;

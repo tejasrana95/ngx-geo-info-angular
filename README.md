@@ -7,7 +7,6 @@ For older version please visit: [https://www.npmjs.com/package/ngx-geo-info-angu
 
 ```bash
 npm install ngx-geo-info-angular --save
-
 ```
 
 Add the cookie service to your `app.module.ts` as a provider:
@@ -19,12 +18,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { GeoService } from 'ngx-geo-info-angular';
+import { NgxGeoCoordinatesInfoModule } from 'ngx-geo-info-angular';
 
 @NgModule({
   declarations: [ AppComponent ],
-  imports: [ BrowserModule, FormsModule, HttpModule ],
-  providers: [ GeoService ],
+  imports: [ BrowserModule, FormsModule, HttpModule, NgxGeoCoordinatesInfoModule ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
@@ -34,7 +32,7 @@ Then, import and inject it into a component:
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { GeoService } from 'ngx-geo-info-angular';
+import { NgxGeoCoordinatesInfo } from 'ngx-geo-info-angular';
 
 @Component({
   selector: 'demo-root',
@@ -42,27 +40,23 @@ import { GeoService } from 'ngx-geo-info-angular';
   styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent implements OnInit {
-  cookieValue = 'UNKNOWN';
-
-  constructor( private geoService: GeoService ) { }
-
+  constructor( private geoService: NgxGeoCoordinatesInfo ) { }
   ngOnInit(): void {
-    this.geoService.getAll().then(value => {
-      console.log(value);
-    }, (err) => {
-        console.log(value);
-    });
-    this.geoService.get('latitude').then(value => {
-      console.log(value);
-    }, (err) => {
-        console.log(value);
-    });
-    this.geoService.get('longitude').then(value => {
-      console.log(value);
-    , (err) => {
-        console.log(value);
-    });
-  }
+   this.geoService.getAll().then(value => {
+            console.log(value);
+        }, (err) => {
+            console.log(err);
+        });
+        this.geoService.get('latitude').then(value => {
+            console.log(value);
+        }, (err) => {
+            console.log(err);
+        });
+        this.geoService.get('longitude').then(value => {
+            console.log(value);
+        }, (err) => {
+            console.log(err);
+        });
 }
 ```
 
@@ -108,20 +102,46 @@ this.geoService.getAll().then(value => {
 # Error Response
 ``` javascript
 {
-  status : error,
-  message: Error Message,
-  name: Error Name,
+    status : error,
+    message: 'Error Message',
+    data:{
+        accuracy : '',
+        altitude : '',
+        altitudeAccuracy : '',
+        heading : '',
+        latitude :'',
+        longitude : '',
+        speed : '',
+        timestamp : '',
+    }
 }
 ``` 
 
 # Success Response
 ```javascript
 {
-  status: success,
-  geoData: number if you call get function else return all coordination object
+    status : 'success',
+    message: '',
+    data: {
+        accuracy : <number>,
+        altitude : <it work if your browser support>,
+        altitudeAccuracy : <it work if your browser support>,
+        heading : <it work if your browser support>,
+        latitude : <double/float>,
+        longitude : <double/float>,
+        speed : <it work if your browser support>,
+        timestamp : <number (TimeStamp) when you get the information>,
+    }
 }
 ```
-
+If call get only then response will be
+```javascript
+{
+    status : 'success',
+    message: '',
+    data: <value>
+}
+```
 # Author
 
 This Geo service is brought to you by [Tejas Rana](https://www.tejasrana.com/). I built this because I need Geoinformation of the user. and make it in component basis makes me hard to manage. So I built the module and other Users can also use it easily.

@@ -1,12 +1,9 @@
-import * as i0 from "@angular/core";
 export declare class NgxGeoCoordinatesInfo {
     gotdevice: any;
     constructor();
     getCurrentLocation(options: any): Promise<any>;
     get(type: string): Promise<any>;
     getAll(): Promise<any>;
-    static ɵfac: i0.ɵɵFactoryDef<NgxGeoCoordinatesInfo, never>;
-    static ɵprov: i0.ɵɵInjectableDef<NgxGeoCoordinatesInfo>;
 }
 export declare class CoodinatesResponse {
     status: string;
