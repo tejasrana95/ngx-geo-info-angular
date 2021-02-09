@@ -27,6 +27,14 @@
     "type": "git",
     "url": "https://github.com/tejasrana95/ngx-geo-info-angular.git"
   },
+  "keywords": [
+    "Geo info",
+    "angular geo info",
+    "user lat long",
+    "get user geo information for angular",
+    "tejas rana geo info",
+    "tejasrana95"
+  ],
   "license": "MIT",
   "dependencies": {
     "@angular-devkit/schematics": "^9.1.1",
